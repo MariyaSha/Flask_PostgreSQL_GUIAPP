@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Thomas Anderson — Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- User Profile -->
+    <main class="container">
+        <div class="card">
+            <!-- Picture -->
+            <img class="avatar-large"
+                 src="{{ url_for('static', filename='avatars/user.png') }}"
+                 alt="User avatar">
+            <!-- Name & Country-->
+            <h1>
+                <img class="flag-inline"
+                     src="{{ url_for('static', filename='flags/United States.png') }}"
+                     alt="United States flag">
+                Thomas Anderson
+            </h1>
+            <!-- Username Handle -->
+            <p class="muted">@UserName</p>
+            <!-- Bio -->
+            <p class="bio">Hello World</p>
+            <!-- date of birth -->
+            <p class="muted">🎂 January 01, 2025</p>
+        </div>
+    </main>
+</body>
+</html>
