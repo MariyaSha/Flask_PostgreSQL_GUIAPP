@@ -1,16 +1,13 @@
 from flask import Flask, render_template
 import psycopg
-
-from dotenv import load_dotenv
-load_dotenv()
-
 import os
-DB = os.getenv("DATABASE_URL")
+
+DB_URL = os.getenv("DATABASE_URL")
 
 app = Flask(__name__)
 
 def get_all_profiles():
-    with psycopg.connect(DB) as connection:
+    with psycopg.connect(DB_URL) as connection:
         cursor = connection.cursor()
         cursor.execute("""
             SELECT username, photo_path FROM user_profiles;
@@ -18,7 +15,7 @@ def get_all_profiles():
         return cursor.fetchall()
 
 def get_profile(username):
-    with psycopg.connect(DB) as connection:
+    with psycopg.connect(DB_URL) as connection:
         cursor = connection.cursor()
         cursor.execute(
             "SELECT * FROM user_profiles WHERE username = %s;",
@@ -38,5 +35,5 @@ def profile(username):
     return render_template("index.html", user=user, profiles=profiles)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port="8080")
     
