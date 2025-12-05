@@ -1,0 +1,3 @@
+Flask>=2.2
+psycopg>=3.0
+python-dotenv>=0.21

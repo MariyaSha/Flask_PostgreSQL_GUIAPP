@@ -1,9 +1,13 @@
 from flask import Flask, render_template
 import psycopg
 
-app = Flask(__name__)
+from dotenv import load_dotenv
+load_dotenv()
 
-DB = "postgresql:///social_app"
+import os
+DB = os.getenv("DATABASE_URL")
+
+app = Flask(__name__)
 
 def get_all_profiles():
     with psycopg.connect(DB) as connection:
