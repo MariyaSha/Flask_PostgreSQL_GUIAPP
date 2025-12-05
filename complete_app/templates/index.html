@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>{{ user[1] }} — Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- User Profile -->
+    <main class="container">
+        <div class="card">
+            <!-- Picture -->
+            <img class="avatar-large"
+                 src="{{ url_for('static', filename=user[2]) }}" 
+                 alt="{{ user[1] }} avatar">
+            <!-- Name & Country-->
+            <h1>
+                <img class="flag-inline"
+                     src="{{ url_for('static', filename='flags/' ~ user[4] ~ '.png') }}"
+                     alt="{{ user[4] }} flag">
+                {{ user[1] }}
+            </h1>
+            <!-- Username Handle -->
+            <p class="muted">@{{ user[0] }}</p>
+            <!-- Bio -->
+            <p class="bio">{{ user[3] }}</p>
+            <!-- date of birth -->
+            <p class="muted">🎂 {{ user[5].strftime("%B %d, %Y") }}</p>
+        </div>
+    </main>
+    <!-- Bottom Navigation -->
+    <nav class="bottom-bar">
+        {% for uname, photo_path in profiles %}
+        <a class="thumb"
+           href="{{ url_for('profile', username=uname) }}"
+           title="@{{ uname }}">
+            <img src="{{ url_for('static', filename=photo_path) }}"
+                 alt="@{{ uname }} avatar">
+            <span>{{ uname }}</span>
+        </a>
+        {% endfor %}
+    </nav>
+</body>
+</html>
