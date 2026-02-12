@@ -39,7 +39,7 @@ Flask_PostgreSQL_GUIAPP/
 └── LICENSE
 ```
 
-## 🏃 Run Complete App
+## 🏃 Run Complete App Locally (Minimal Solution Only - Real Solution in the Video!)
 
 ### Clone Repo 💻 
 
