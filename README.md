@@ -3,6 +3,8 @@
 
 This project demonstrates how to transform a simple **static Flask “Hello World” template** into a **live full-stack web application** backed by a live **PostgreSQL database** and deployed online.
 
+<img width="600" alt="screenshot of complete application" src="https://github.com/user-attachments/assets/3eaba3a4-5e48-41d6-a1d0-7c4c3d1045ab">
+
 ## 📺 Full Tutorial
 
 Watch the step-by-step video walkthrough here:  
