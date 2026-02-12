@@ -1,9 +1,13 @@
 # Flask + PostgreSQL GUI App 🚀  
-### From Static HTML to Live Deployed Full-Stack Website
+From Static HTML to Live Deployed Full-Stack Website
+
+## 🔎 Overview 
 
 This project demonstrates how to transform a simple **static Flask “Hello World” template** into a **live full-stack web application** backed by a live **PostgreSQL database** and deployed online.
 
-<img width="600" alt="screenshot of complete application" src="https://github.com/user-attachments/assets/3eaba3a4-5e48-41d6-a1d0-7c4c3d1045ab">
+### Screenshots
+
+<img alt="screenshot of complete application" src="https://github.com/user-attachments/assets/9a2c5e9e-0f6d-48b0-a655-f91438079a6f">
 
 ## 📺 Full Tutorial
 
@@ -21,13 +25,15 @@ By the end of this video, you will have:
 
 ### Starter Files
 The starter_files folder contains:
-- Static Flask template  
-- Basic HTML/CSS layout  
-- CSV profile data  
-- Image assets
+- Static Flask template.  
+- Basic HTML/CSS layout.
+- Image assets.
+- CSV profile data to be inserted into the Database.
 
 ### Complete App
-a production-ready instanace of the app - ready to deploy on Sevalla.
+The complete_app folder contains a production-ready instanace of the app - ready to deploy on Sevalla.
+<br>
+Please note: You'll need to host a live Database following the instructions below in order to make it work! Watch the full tutorial on YouTube for visual steb by step instructions.
 
 ## 🧠 What You’ll Learn
 
