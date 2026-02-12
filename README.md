@@ -115,10 +115,10 @@ DB_URL = "postgres://<YOUR-USERNAME>:<YOUR-PASSWORD>@<DATABASE-LOCATION>.proxy.s
 python app.py
 ```
 
-10. Navigate to:
+10. In your browser, navigate to:
 
 ```
-http://127.0.0.1:8080
+http://localhost:8080
 ```
 
 11. Enjoy! 🤩🤩🤩
