@@ -42,6 +42,11 @@ Flask_PostgreSQL_GUIAPP/
 
 ## 🏃 Run Complete App Locally (Minimal Solution)
 
+If you don't have time to watch my step by step 20-min tutorial, here's a minimal soltuion to run the complete application on your system.
+<br>
+Please note: the full application is designed to run online with a live database, and be publically accessible. 
+For this, you'll need to host the database and the app itself. This minimal solution only hosts the database, while running your app locally - which is not a traditional solution. Only use it if you're extra impatient! 😅
+
 ### Clone Repo 💻 
 
 Using WSL:
