@@ -1,6 +1,11 @@
 # Flask + PostgreSQL GUI App 🚀  
 From Static HTML to Live Deployed Full-Stack Website
 
+## 📺 Video Tutorial
+
+This repository was created to support the following YouTube tutorial - watch the step-by-step video walkthrough here:  
+<a href="" target="_blank"><img width="600" alt="Build PostgreSQL GUI App thumbnail" src="https://github.com/user-attachments/assets/353344d4-65d3-443c-bea3-7932eb6e3489" /></a>
+
 ## 🔎 Overview 
 
 This project demonstrates how to transform a simple **static Flask “Hello World” template** into a **live full-stack web application** backed by a live **PostgreSQL database** and deployed online.
@@ -8,18 +13,6 @@ This project demonstrates how to transform a simple **static Flask “Hello Worl
 ### Screenshots
 
 <img alt="screenshot of complete application" src="https://github.com/user-attachments/assets/9a2c5e9e-0f6d-48b0-a655-f91438079a6f">
-
-## 📺 Full Tutorial
-
-Watch the step-by-step video walkthrough here:  
-<a href="" target="_blank"><img width="600" alt="Build PostgreSQL GUI App thumbnail" src="https://github.com/user-attachments/assets/353344d4-65d3-443c-bea3-7932eb6e3489" /></a>
-<br>
-<br>
-By the end of this video, you will have:
-- A dynamic Flask web interface.
-- A live PostgreSQL database, hosted on Sevalla.  
-- User profiles pulled from SQL.
-- A fully deployed public website (hosted on Sevalla as well).
 
 ## 🎁 What's Inside?
 
@@ -33,21 +26,7 @@ The starter_files folder contains:
 ### Complete App
 The complete_app folder contains a production-ready instanace of the app - ready to deploy on Sevalla.
 <br>
-Please note: You'll need to host a live Database following the instructions below in order to make it work! Watch the full tutorial on YouTube for visual steb by step instructions.
-
-## 🧠 What You’ll Learn
-
-- How Flask web apps actually work (frontend + backend)  
-- Creating and structuring a PostgreSQL database  
-- Importing CSV data into SQL tables  
-- Primary Keys, NOT NULL, VARCHAR & constraints explained simply  
-- Connecting Python to PostgreSQL using `psycopg`  
-- Turning static HTML into dynamic database-driven pages  
-- Creating dynamic user routes (`/user/username`)  
-- Navigation bars with database loops  
-- Environment variables & protecting secrets  
-- Deploying a full website with GitHub integration  
-- Reading deployment logs & fixing real errors  
+<b>🚨 Please note: 🚨</b> You'll need to host a live Database following the instructions below in order to make it work! Watch the full tutorial on YouTube for visual steb by step instructions.
 
 ## 📁 Project Structure
 
@@ -60,9 +39,21 @@ Flask_PostgreSQL_GUIAPP/
 └── LICENSE
 ```
 
----
+## 🏃 Run Complete App
 
-## ⚙️ Environment Setup
+### Clone Repo 💻 
+
+Using WSL:
+
+```bash
+git clone https://github.com/MariyaSha/Flask_PostgreSQL_GUIAPP.git
+cd Flask_PostgreSQL_GUIAPP
+cd complete_app
+```
+
+### Environment Setup ⚙️ 
+
+Using Miniforge:
 
 ```bash
 conda create -n social_env python=3.12 flask
@@ -70,20 +61,27 @@ conda activate social_env
 pip install psycopg
 ```
 
-Run the app locally:
+### Create Live Database on Sevalla 📊
+
+1. Navigate to a database hosting platform named <a href="https://sevalla.com/?utm_source=pythonsimplified&utm_medium=Referral&utm_campaign=youtube">Sevalla</a>.
+2. Register and click on "Deploy a new database".
+3. Select a database name (social_app), username, password, and display name (social_app as well).
+4. In the "networking" tab - enable an external connection.
+5. In the "overview" tab - copy the URL of your new database.
+6. Back in your WSL terminal, type the following:
 
 ```bash
-python app.py
+sudo apt update
+sudo apt install postgresql
+psql <PASTE_YOUR_DATABASE_URL>
 ```
 
-Navigate to:
-
+please make sure the last command looks similar to this:
 ```
-http://127.0.0.1:5000
+psql postgres://<YOUR-USERNAME>:<YOUR-PASSWORD>@<DATABASE-LOCATION>.proxy.sevalla.app:30999/<DATABASE_NAME>
 ```
 
-## 🗄️ Example SQL Table Creation
-
+7. Once you are connected to your remote database on Sevalla, type the following:
 ```sql
 CREATE TABLE user_profiles(
   username VARCHAR(20) PRIMARY KEY,
@@ -95,32 +93,25 @@ CREATE TABLE user_profiles(
 );
 ```
 
-## 🔌 Example Database Connection (Python)
-
-```python
-import psycopg
-
-with psycopg.connect(DB_URL) as connection:
-    cursor = connection.cursor()
-    cursor.execute("SELECT * FROM user_profiles;")
-    results = cursor.fetchall()
+8. Then, in `complete_app/app.py` replace `os.getenv("DATABASE_URL")` with the URL of your database, such that:
+```
+DB_URL = "postgres://<YOUR-USERNAME>:<YOUR-PASSWORD>@<DATABASE-LOCATION>.proxy.sevalla.app:30999/<DATABASE_NAME>"
 ```
 
-## 🚀 Deployment Overview
-
-1. Modify my project and customize it to your needs.
-2. Push complete project to your GitHub.
-3. Create PostgreSQL database on Sevalla. 
-4. Set environment variable DATABASE_URL. 
-5. Create application in Sevalla dashboard.  
-6. Connect internal database service.  
-7. Add start command:
+9. Run the complete application locally:
 
 ```bash
 python app.py
 ```
 
-7. Deploy 🎉   
+10. Navigate to:
+
+```
+http://127.0.0.1:8080
+```
+
+11. Enjoy!
+12. If you'd like to publish this application, and not just the database - please follow the instructions of my YouTube tutorial!
 
 ## 📜 License
 
