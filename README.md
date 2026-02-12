@@ -3,7 +3,8 @@ From Static HTML to Live Deployed Full-Stack Website
 
 ## 📺 Video Tutorial
 
-This repository was created to support the following YouTube tutorial - watch the step-by-step video walkthrough here:  
+This repository was created to support the following YouTube tutorial - watch the step-by-step video walkthrough here: 
+<br>
 <a href="" target="_blank"><img width="600" alt="Build PostgreSQL GUI App thumbnail" src="https://github.com/user-attachments/assets/353344d4-65d3-443c-bea3-7932eb6e3489" /></a>
 
 ## 🔎 Overview 
@@ -39,7 +40,7 @@ Flask_PostgreSQL_GUIAPP/
 └── LICENSE
 ```
 
-## 🏃 Run Complete App Locally (Minimal Solution Only - Real Solution in the Video!)
+## 🏃 Run Complete App Locally (Minimal Solution)
 
 ### Clone Repo 💻 
 
@@ -51,6 +52,8 @@ cd Flask_PostgreSQL_GUIAPP
 cd complete_app
 ```
 
+If you're not sure how to install WSL & Miniforge, watch <a href="https://youtu.be/luM5kwH6tjQ">this tutorial</a> of mine.
+
 ### Environment Setup ⚙️ 
 
 Using Miniforge:
@@ -61,11 +64,13 @@ conda activate social_env
 pip install psycopg
 ```
 
+If you're not sure how to install WSL & Miniforge, watch <a href="https://youtu.be/luM5kwH6tjQ">this tutorial</a> of mine.
+
 ### Create Live Database on Sevalla 📊
 
 1. Navigate to a database hosting platform named <a href="https://sevalla.com/?utm_source=pythonsimplified&utm_medium=Referral&utm_campaign=youtube">Sevalla</a>.
 2. Register and click on "Deploy a new database".
-3. Select a database name (social_app), username, password, and display name (social_app as well).
+3. Select a database name (social_app), username, password, and display name (social_app, as well).
 4. In the "networking" tab - enable an external connection.
 5. In the "overview" tab - copy the URL of your new database.
 6. Back in your WSL terminal, type the following:
@@ -77,7 +82,7 @@ psql <PASTE_YOUR_DATABASE_URL>
 ```
 
 please make sure the last command looks similar to this:
-```
+```bash
 psql postgres://<YOUR-USERNAME>:<YOUR-PASSWORD>@<DATABASE-LOCATION>.proxy.sevalla.app:30999/<DATABASE_NAME>
 ```
 
@@ -110,7 +115,7 @@ python app.py
 http://127.0.0.1:8080
 ```
 
-11. Enjoy!
+11. Enjoy! 🤩🤩🤩
 12. If you'd like to publish this application, and not just the database - please follow the instructions of my YouTube tutorial!
 
 ## 📜 License
