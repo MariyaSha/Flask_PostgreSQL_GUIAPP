@@ -5,7 +5,7 @@ From Static HTML to Live Deployed Full-Stack Website
 
 This repository was created to support the following YouTube tutorial - watch the step-by-step video walkthrough here: 
 <br>
-<a href="" target="_blank"><img width="600" alt="Build PostgreSQL GUI App thumbnail" src="https://github.com/user-attachments/assets/353344d4-65d3-443c-bea3-7932eb6e3489" /></a>
+<a href="https://youtu.be/sFSFrxlLMq8" target="_blank"><img width="600" alt="Build PostgreSQL GUI App thumbnail" src="https://github.com/user-attachments/assets/353344d4-65d3-443c-bea3-7932eb6e3489" /></a>
 
 ## 🔎 Overview 
 
